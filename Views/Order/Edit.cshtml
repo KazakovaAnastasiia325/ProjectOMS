@@ -1,0 +1,21 @@
+﻿@model Order
+<h2>Редактирование заказа</h2>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+
+    <label>Клиент</label>
+    <input asp-for="CustomerName" class="form-control" />
+
+    <label>Продукт</label>
+    <input asp-for="Product" class="form-control" />
+
+    <label>Статус</label>
+    <select asp-for="Status" class="form-control">
+        <option>В ожидании</option>
+        <option>Выполняется</option>
+        <option>Завершен</option>
+    </select>
+
+    <button type="submit" class="btn btn-success">Сохранить</button>
+</form>
